@@ -1,30 +1,55 @@
 .container {
     padding: 0 2rem;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 .stepBtn {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 1rem;
+}
+
+.overview {
+  display: grid;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overview :nth-child(2n) {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+.overviewItem {
+  
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.soloBtn {
+  margin-left: auto;
+  margin-right: 0;
 }
   
   .main {
     min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     font-size: 1.25rem;
-    width: 100%
+    width: 50%
   }
 
   .field {
       margin-top: 1rem;
-      width: max(50%, 5rem)
+      width: max(100%, 5rem)
   }
   
   .footer {

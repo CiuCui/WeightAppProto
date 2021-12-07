@@ -1,0 +1,32 @@
+{
+  "userInfos": [
+    {
+      "firstName": "Laura",
+      "lastName": "Meyer",
+      "mail": "Mail H",
+      "age": "22",
+      "weight": "0",
+      "height": "3",
+      "id": "dc1241a6-3e27-48af-a0c6-1f14497e1e2c"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Müller",
+      "mail": "Mail Mail",
+      "age": "23",
+      "weight": "02",
+      "height": "38",
+      "id": "583aae74-6529-49d9-a180-7a891e9a2aee"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

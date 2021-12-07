@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
+import FormConfirm from './FormConfirm';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 const userForm = () => {
@@ -14,6 +17,9 @@ const userForm = () => {
     const [height, setHeight] = useState("")
 
     const [values, setValues] = useState({})
+
+
+
 
     useEffect(() => {
         setValues({ step, firstName, lastName, mail, age, weight, height })
@@ -39,7 +45,6 @@ const userForm = () => {
     const handleChange = (input, e) => {
         switch (input) {
             case "firstName":
-                console.log("Firstname: ", e.target.value)
                 setFirstName(e.target.value);
                 break;
             case "lastName":
@@ -60,6 +65,34 @@ const userForm = () => {
         }
     };
 
+    const fetchTasks = async () => {
+        const res = await fetch('http://localhost:5000/userInfos')
+        const data = await res.json()
+
+        return data
+    }
+
+    const addInfo = async (userInfo) => {
+        const generatedId = uuidv4();
+        delete userInfo["step"]
+        userInfo = { ...userInfo, id: generatedId }
+        const res = await fetch('http://localhost:5000/userInfos', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(userInfo),
+        })
+
+        const data = await res.json()
+
+    }
+
+    const confirm = async () => {
+        addInfo(values)
+
+        alert("Confirmation")
+    }
 
     switch (step) {
         case 1:
@@ -77,6 +110,14 @@ const userForm = () => {
                     prevStep={prevStep}
                     values={values}
                     handleChange={handleChange}
+                />
+            );
+        case 3:
+            return (
+                <FormConfirm
+                    prevStep={prevStep}
+                    values={values}
+                    confirm={confirm}
                 />
             );
     }
