@@ -10,7 +10,10 @@ const Nav = () => {
                     <Link href='/'>Home</Link>
                 </li>
                 <li>
-                    <Link href='/personalDetails'>Personal Details</Link>
+                    <Link href='/personalDetails'>Persönliche Daten</Link>
+                </li>
+                <li>
+                    <Link href='/goals' >Ziele setzen</Link>
                 </li>
                 <li>
                     <Link href='/about'>About</Link>

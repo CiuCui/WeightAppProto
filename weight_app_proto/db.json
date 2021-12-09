@@ -17,16 +17,33 @@
       "weight": "02",
       "height": "38",
       "id": "583aae74-6529-49d9-a180-7a891e9a2aee"
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "firstName": "Philipp",
+      "lastName": "Ciupke",
+      "mail": "pcMail",
+      "age": "100",
+      "weight": "100",
+      "height": "100",
+      "id": "bdce3b32-4eea-4448-aaf8-00d8f89eb57e"
+    },
+    {
+      "firstName": "kljlkj",
+      "lastName": "lkj",
+      "mail": "jh",
+      "age": "18",
+      "weight": "250",
+      "height": "wef",
+      "id": "7d4ff755-33df-4751-bedb-8ebd882428d4"
+    },
+    {
+      "firstName": "kljlkj",
+      "lastName": "lkj",
+      "mail": "jh",
+      "age": "18",
+      "weight": "250",
+      "height": "wef",
+      "id": "e49dd799-cc91-477b-b895-125727a6b279"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
