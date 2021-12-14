@@ -1,4 +1,24 @@
 {
+  "userGoal": [
+    {
+      "goal": "Ziel",
+      "selfEfficacy": "7",
+      "motivation": "8",
+      "id": "Userid"
+    },
+    {
+      "goal": "Test",
+      "selfEfficacy": "2",
+      "motivation": "10",
+      "id": "9c02b99b-4299-44b2-bf28-e5be82546a15"
+    },
+    {
+      "goal": "Ich möcht ein Ziel erreichen... welches ist noch nicht ganz klar. aber es soll eins sein. Ein gutes. Ein Großes usw..",
+      "selfEfficacy": "6",
+      "motivation": "7",
+      "id": "d0b0350b-693a-4b3e-9515-ab42c64e21c3"
+    }
+  ],
   "userInfos": [
     {
       "firstName": "Laura",

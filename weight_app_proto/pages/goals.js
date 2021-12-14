@@ -1,11 +1,11 @@
 import React from 'react'
-import FormGoals from '../components/FormGoals'
+import GoalsForm from '../components/GoalsForm'
 
 const goals = () => {
     return (
-        <div>
-            <FormGoals />
-        </div>
+        <>
+            <GoalsForm />
+        </>
     )
 }
 

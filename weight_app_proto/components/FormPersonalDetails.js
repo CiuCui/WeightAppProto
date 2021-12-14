@@ -15,28 +15,31 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
             <div className={personalStyles.container}>
 
                 <div className={personalStyles.main}>
-                    <FormHeader title="Personal Details" />
+                    <FormHeader title="Persönliche Daten" />
+                    <label> Wie alt bist du? </label>
                     <TextField
                         className={personalStyles.field}
-                        label="Enter your Age"
+                        label="Alter"
                         onChange={e => handleChange("age", e)}
                         defaultValue={values.age}
                     />
+                    <label> Stelle dich doch mal bitte auf eine Waage und verate uns wie viel du wiegst. (Angabe in kg) </label>
                     <TextField
                         className={personalStyles.field}
-                        label="Enter your weight"
+                        label="Gewicht in kg"
                         onChange={e => handleChange("weight", e)}
                         defaultValue={values.weight}
                     />
+                    <label> Und dann benötigen wir noch deine Größe. (Angabe in cm) </label>
                     <TextField
                         className={personalStyles.field}
-                        label="Enter your height"
+                        label="Größe in cm"
                         onChange={e => handleChange("height", e)}
                         defaultValue={values.height}
                     />
                     <div className={personalStyles.stepBtn}>
-                        <Button onClick={prevStep} variant="outlined">Previous</Button>
-                        <Button onClick={nextStep} variant="outlined">Next</Button>
+                        <Button onClick={prevStep} variant="outlined">Zurück</Button>
+                        <Button onClick={nextStep} variant="outlined">Weiter</Button>
                     </div>
 
                 </div>

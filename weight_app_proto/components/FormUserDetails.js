@@ -22,18 +22,21 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
 
                 <div className={personalStyles.main}>
                     <FormHeader title="User Details" />
+                    <label> Wie lautet dein Vorname? </label>
                     <TextField
                         className={personalStyles.field}
                         label="Enter your First Name"
                         onChange={e => handleChange("firstName", e)}
                         defaultValue={values.firstName}
                     />
+                    <label> Und dein Nachname? </label>
                     <TextField
                         className={personalStyles.field}
                         label="Enter your Last Name"
                         onChange={e => handleChange("lastName", e)}
                         defaultValue={values.lastName}
                     />
+                    <label> Unter welcher Mailadresse können wir dich erreichen? </label>
                     <TextField
                         className={personalStyles.field}
                         label="Enter your mail"

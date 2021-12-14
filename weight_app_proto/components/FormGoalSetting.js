@@ -13,6 +13,7 @@ const FormGoalSetting = ({ values, handleChange, prevStep, nextStep }) => {
                     label="Welches Ziel möchtest du erreichen?"
                     onChange={e => handleChange("goal", e)}
                     defaultValue={values.goal}
+                    multiline
                 />
                 <div className={goalStyles.stepBtn}>
                     <Button onClick={prevStep} variant="outlined">Previous</Button>

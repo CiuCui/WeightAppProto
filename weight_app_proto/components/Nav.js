@@ -16,6 +16,9 @@ const Nav = () => {
                     <Link href='/goals' >Ziele setzen</Link>
                 </li>
                 <li>
+                    <Link href='/moveChallenge' >Bewegungs-Challenge erstellen</Link>
+                </li>
+                <li>
                     <Link href='/about'>About</Link>
                 </li>
 

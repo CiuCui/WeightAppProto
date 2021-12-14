@@ -3,13 +3,15 @@ import FormHeader from './FormHeader'
 import FormGoalSetting from './FormGoalSetting'
 import FormSelfEfficacy from './FormSelfEfficacy'
 import FormMotivation from './FormMotivation'
+import FormGoalConfirm from './ConfirmGoal'
+import { v4 as uuidv4 } from 'uuid';
 
 const FormGoals = () => {
 
     const [step, setStep] = useState(1)
     const [goal, setGoal] = useState("")
-    const [selfEfficacy, setSelfEfficacy] = useState("")
-    const [motivation, setMotivation] = useState("")
+    const [selfEfficacy, setSelfEfficacy] = useState(" ")
+    const [motivation, setMotivation] = useState(" ")
     const [values, setValues] = useState({})
 
 
@@ -40,6 +42,30 @@ const FormGoals = () => {
                 setMotivation(e.target.value)
         }
     };
+
+    const addGoal = async (userGoal) => {
+        delete userGoal["step"]
+        const generatedId = uuidv4();
+        const userId = generatedId
+        userGoal = { ...userGoal, id: userId }
+        const res = await fetch('http://localhost:5000/userGoal', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(userGoal),
+        })
+
+        const data = await res.json()
+
+    }
+
+    const confirm = async () => {
+        addGoal(values)
+
+        alert("Confirmation")
+    }
+
 
     useEffect(() => {
         setValues({ step, goal, selfEfficacy, motivation })
@@ -73,6 +99,14 @@ const FormGoals = () => {
                     values={values}
                     handleChange={handleChange}
 
+                />
+            );
+        case 4:
+            return (
+                <FormGoalConfirm
+                    prevStep={prevStep}
+                    values={values}
+                    confirm={confirm}
                 />
             )
 

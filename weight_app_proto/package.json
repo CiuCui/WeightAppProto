@@ -11,10 +11,12 @@
   "dependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
+    "@mui/lab": "^5.0.0-alpha.59",
     "@mui/material": "^5.2.2",
     "@mui/x-data-grid": "^5.1.0",
     "browserify-fs": "^1.0.0",
     "csv-writer": "^1.6.0",
+    "date-fns": "^2.27.0",
     "json-server": "^0.17.0",
     "material-ui": "^0.20.2",
     "next": "12.0.5",

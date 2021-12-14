@@ -4,9 +4,9 @@ import UserForm from '../components/UserForm'
 
 const personalDetails = () => {
     return (
-        <div>
+        <>
             <UserForm />
-        </div>
+        </>
     )
 }
 
