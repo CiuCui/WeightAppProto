@@ -10,15 +10,20 @@ const FormSelfEfficacy = ({ values, handleChange, nextStep, prevStep }) => {
         <div className={goalStyles.container}>
             <div className={goalStyles.main}>
                 <FormHeader title="Self-Efficacy" />
-                <label> Wie sicher bist du, dieses Ziel zu erreichen? </label>
-                <FormControl component="fieldset">
-                    <FormLabel component="legend">Erfolgswahrscheinlichkeit</FormLabel>
-                    <RadioGroup row aria-label="selfEfficacyRadioGroup" value={values.selfEfficacy} name="selfEfficacy-radioGroup" onChange={e => handleChange("selfEfficacy", e)}>
-                        {answerArray.map((answer) => {
-                            return <FormControlLabel key={answer} value={answer} control={<Radio />} label={answer} />
-                        })}
-                    </RadioGroup>
-                </FormControl>
+
+
+                <div className={goalStyles.section}>
+                    <label> Wie sicher bist du, dieses Ziel zu erreichen? </label>
+                    <FormControl component="fieldset">
+                        <FormLabel component="legend">Erfolgswahrscheinlichkeit</FormLabel>
+                        <RadioGroup row aria-label="selfEfficacyRadioGroup" value={values.selfEfficacy} name="selfEfficacy-radioGroup" onChange={e => handleChange("selfEfficacy", e)}>
+                            {answerArray.map((answer) => {
+                                return <FormControlLabel key={answer} value={answer} control={<Radio />} label={answer} />
+                            })}
+                        </RadioGroup>
+                    </FormControl>
+                </div>
+
                 <div className={goalStyles.stepBtn}>
                     <Button onClick={prevStep} variant="outlined">Previous</Button>
                     <Button onClick={nextStep} variant="outlined">Next</Button>

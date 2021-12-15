@@ -10,12 +10,21 @@ const MoveChallengeForm = () => {
     const [timesPerDay, setTimesPerDay] = useState("")
     const [distance, setDistance] = useState("")
     const [unit, setUnit] = useState("")
+    const [times, setTimes] = useState({
+        "Montag": { time: "", place: "" },
+        "Dienstag": { time: "", place: "" },
+        "Mittwoch": { time: "", place: "" },
+        "Donnerstag": { time: "", place: "" },
+        "Freitag": { time: "", place: "" },
+        "Samstag": { time: "", place: "" },
+        "Sonntag": { time: "", place: "" }
+    })
     const [values, setValues] = useState({})
 
 
     useEffect(() => {
-        setValues({ step, moveType, days, timesPerDay, distance, unit })
-    }, [step, moveType, days, timesPerDay, distance, unit])
+        setValues({ step, moveType, days, timesPerDay, distance, unit, times })
+    }, [step, moveType, days, timesPerDay, distance, unit, times])
 
 
 
@@ -47,6 +56,7 @@ const MoveChallengeForm = () => {
                         const index = newDays.indexOf(e.target.name)
                         if (index > -1) {
                             newDays.splice(index, 1);
+                            console.log("new ", newDays)
                         }
                         setDays(newDays)
                     }
@@ -69,13 +79,19 @@ const MoveChallengeForm = () => {
             case "unit":
                 setUnit(e.target.value)
                 break;
-
-
-
-
-
         }
     };
+
+    const handleChangeTimes = (input, day, newValue, e) => {
+        switch (input) {
+            case "time":
+                setTimes({ ...times, [day]: { ...times[day], time: newValue } })
+                break;
+            case "place":
+                setTimes({ ...times, [day]: { ...times[day], place: e.target.value } })
+                break;
+        }
+    }
 
 
     switch (step) {
@@ -85,6 +101,7 @@ const MoveChallengeForm = () => {
                     nextStep={nextStep}
                     values={values}
                     handleChange={handleChange}
+                    handleChangeTimes={handleChangeTimes}
                 />
             );
         case 2:

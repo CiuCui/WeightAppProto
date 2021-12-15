@@ -8,13 +8,18 @@ const FormGoalSetting = ({ values, handleChange, prevStep, nextStep }) => {
         <div className={goalStyles.container}>
             <div className={goalStyles.main}>
                 <FormHeader title="Ziele setzen" />
-                <TextField
-                    className={goalStyles.field}
-                    label="Welches Ziel möchtest du erreichen?"
-                    onChange={e => handleChange("goal", e)}
-                    defaultValue={values.goal}
-                    multiline
-                />
+
+                <div className={goalStyles.section}>
+                    <label>Welches Ziel möchtest du erreichen? Versuche es bitte möglichst konkret zu beschreiben.</label>
+                    <TextField
+                        className={goalStyles.field}
+                        label="Welches Ziel möchtest du erreichen?"
+                        onChange={e => handleChange("goal", e)}
+                        defaultValue={values.goal}
+                        multiline
+                    />
+                </div>
+
                 <div className={goalStyles.stepBtn}>
                     <Button onClick={prevStep} variant="outlined">Previous</Button>
                     <Button onClick={nextStep} variant="outlined">Next</Button>

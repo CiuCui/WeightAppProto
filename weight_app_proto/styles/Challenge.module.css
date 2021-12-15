@@ -23,18 +23,31 @@
   margin-bottom: 2rem;
 }
 
-.overview :nth-child(2n) {
+.overviewConfirm {
+  display: grid;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overviewConfirm :nth-child(2n) {
   margin-left: auto;
   margin-right: 0;
   text-align: right;
 }
 
+
+
 .overviewItem {
-  
+  vertical-align: baseline;
 }
 
 .alert {
   margin-top: 1rem;
+}
+
+.section {
+  margin-top: 2rem;
 }
 
 .soloBtn {

@@ -10,16 +10,20 @@ const FormMotivation = ({ values, handleChange, nextStep, prevStep }) => {
         <div className={goalStyles.container}>
             <div className={goalStyles.main}>
                 <FormHeader title="Motivation" />
-                <label> Wie hoch ist deine Motivation dieses Ziel zu erreichen? </label>
-                <FormControl component="fieldset">
-                    <FormLabel component="legend">Motivation</FormLabel>
 
-                    <RadioGroup row aria-label="motivationRadioGroup" defaultValue={values.motivation} name="row-radio-buttons-group" onChange={e => handleChange("motivation", e)}>
-                        {answerArray.map((answer) => {
-                            return <FormControlLabel key={answer} value={answer} control={<Radio />} label={answer} />
-                        })}
-                    </RadioGroup>
-                </FormControl>
+                <div className={goalStyles.section}>
+                    <label> Wie hoch ist deine Motivation dieses Ziel zu erreichen? </label>
+                    <FormControl component="fieldset">
+                        <FormLabel component="legend">Motivation</FormLabel>
+
+                        <RadioGroup row aria-label="motivationRadioGroup" defaultValue={values.motivation} name="row-radio-buttons-group" onChange={e => handleChange("motivation", e)}>
+                            {answerArray.map((answer) => {
+                                return <FormControlLabel key={answer} value={answer} control={<Radio />} label={answer} />
+                            })}
+                        </RadioGroup>
+                    </FormControl>
+                </div>
+
                 <div className={goalStyles.stepBtn}>
                     <Button onClick={prevStep} variant="outlined">Previous</Button>
                     <Button onClick={nextStep} variant="outlined">Next</Button>
