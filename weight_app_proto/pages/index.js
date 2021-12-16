@@ -32,9 +32,7 @@ export async function getStaticProps () {
         })
           database.moveChallenge.forEach(moveChallenge => {
             jsonData.forEach( item => {
-              console.log(item.id === moveChallenge.id)
               if(item.id === moveChallenge.id){
-                console.log("vorher: ", item)
                 item.moveType = moveChallenge.moveType
                 item.days = moveChallenge.days
                 item.timesPerDay = moveChallenge.timesPerDay
@@ -54,14 +52,14 @@ export async function getStaticProps () {
                 item.SaturdayPlace = moveChallenge.SaturdayPlace
                 item.SundayTime = moveChallenge.SundayTime
                 item.SundayPlace = moveChallenge.SundayPlace
-                console.log("Nachher: ", item)
               }
               
             })
           })  
         let results = jsonToCSV(jsonData);
-        console.log("Results: ", results)
         fs.writeFile("output.csv", results)
+        console.log("Umwandlung abgeschlossen: \nDie Ergebnisse sind in der output.csv zu finden.")
+
     }
 });
   
