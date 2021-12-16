@@ -4,9 +4,12 @@ import FormGoalSetting from './FormGoalSetting'
 import FormSelfEfficacy from './FormSelfEfficacy'
 import FormMotivation from './FormMotivation'
 import FormGoalConfirm from './ConfirmGoal'
-import { v4 as uuidv4 } from 'uuid';
+import { UserContext } from '../contexts/userContext';
+
 
 const FormGoals = () => {
+
+    const id = React.useContext(UserContext);
 
     const [step, setStep] = useState(1)
     const [goal, setGoal] = useState("")
@@ -43,17 +46,14 @@ const FormGoals = () => {
         }
     };
 
-    const addGoal = async (userGoal) => {
-        delete userGoal["step"]
-        const generatedId = uuidv4();
-        const userId = generatedId
-        userGoal = { ...userGoal, id: userId }
-        const res = await fetch('http://localhost:5000/userGoal', {
+    const addGoal = async (Goal) => {
+        delete Goal["step"]
+        const res = await fetch(`http://localhost:5000/Goals`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
             },
-            body: JSON.stringify(userGoal),
+            body: JSON.stringify(Goal),
         })
 
         const data = await res.json()
@@ -68,8 +68,8 @@ const FormGoals = () => {
 
 
     useEffect(() => {
-        setValues({ step, goal, selfEfficacy, motivation })
-    }, [step, goal, selfEfficacy, motivation])
+        setValues({ step, goal, selfEfficacy, motivation, id })
+    }, [step, goal, selfEfficacy, motivation, id])
 
 
     switch (step) {

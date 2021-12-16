@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import challengeStyles from '../styles/Challenge.module.css'
 import FormHeader from './FormHeader'
 import { Button, Grid } from '@mui/material'
+import Link from 'next/link'
 
-const ConfirmMovementChallenge = ({ values, prevStep }) => {
+
+const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
 
     const [tim, setTim] = useState([])
 
@@ -55,19 +57,31 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                             </Grid>
                         </Grid>
                     </div>
-                    <div>
+                    <div className={challengeStyles.section}>
+                        <label> <h3> Aktivitätenplanung:</h3> </label>
+                    </div>
+                    <div className={challengeStyles.sectionTimes}>
                         <Grid container spacing={2}>
+                            <Grid item xs={4} className={challengeStyles.overviewHead}>
+                                    <label> Tag </label>
+                            </Grid>
+                            <Grid item xs={4} className={challengeStyles.overviewHead}>
+                                    <label> Uhrzeit: </label>
+                            </Grid>
+                            <Grid item xs={4} className={challengeStyles.overviewHead}>
+                                    <label> Ort: </label>
+                            </Grid>
                             {
                                 (values.times["Montag"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Montag </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Montag"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Montag"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -77,13 +91,13 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                                 (values.times["Dienstag"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Dienstag </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Dienstag"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Dienstag"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -93,13 +107,13 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                                 (values.times["Mittwoch"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Mittwoch </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Mittwoch"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Mittwoch"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -109,13 +123,13 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                                 (values.times["Donnerstag"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Donnerstag </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Donnerstag"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Donnerstag"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -125,13 +139,13 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                                 (values.times["Freitag"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Freitag </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Freitag"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Freitag"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -141,13 +155,13 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                                 (values.times["Samstag"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Samstag </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Samstag"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Samstag"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -157,13 +171,13 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                                 (values.times["Sonntag"]["time"])
                                     ?
                                     <>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> Sonntag </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Sonntag"]["time"].toLocaleTimeString()} </label>
                                         </Grid>
-                                        <Grid item xs={4} className={challengeStyles.overviewItem}>
+                                        <Grid item xs={4} className={challengeStyles.overviewItemTimes}>
                                             <label> {values.times["Sonntag"]["place"]} </label>
                                         </Grid>
                                     </>
@@ -173,9 +187,15 @@ const ConfirmMovementChallenge = ({ values, prevStep }) => {
                         </Grid>
                     </div>
 
-                    <div className={challengeStyles.stepBtn}>
-                        <Button onClick={prevStep} variant="outlined">Zurück</Button>
+                    <div className={challengeStyles.section}>
+                        <div className={challengeStyles.stepBtn}>
+                            <Button onClick={prevStep} variant="outlined">Zurück</Button>
+                            <Link href="/">
+                                <Button onClick={confirm} variant="outlined"> Speichern </Button>
+                            </Link>
+                        </div>
                     </div>
+                   
                 </div>
             </div >
         </>

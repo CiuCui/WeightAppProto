@@ -1,9 +1,88 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Layout.module.css'
+import {Button} from '@mui/material'
+import { jsonToCSV } from 'react-papaparse'
+import fs from 'fs'
+import Link from 'next/link'
+
+
+export async function getStaticProps () {
+  let database = {}
+  fs.readFile('./db.json', 'utf8', (err, data) => {
+
+    if (err) {
+        console.log(`Error reading file from disk: ${err}`);
+    } else {
+        // parse JSON string to JSON object
+        database = JSON.parse(data);
+        const jsonData = []
+        database.userDetails.forEach( details => {
+          jsonData.push(details)
+        })
+        database.Goals.forEach(goalItem => {
+          jsonData.forEach( item => {
+            if(item.id === goalItem.id){
+              item.goal = goalItem.goal
+              item.selfEfficacy = goalItem.selfEfficacy
+              item.motivation = goalItem.motivation
+            }
+
+          })
+        })
+          database.moveChallenge.forEach(moveChallenge => {
+            jsonData.forEach( item => {
+              console.log(item.id === moveChallenge.id)
+              if(item.id === moveChallenge.id){
+                console.log("vorher: ", item)
+                item.moveType = moveChallenge.moveType
+                item.days = moveChallenge.days
+                item.timesPerDay = moveChallenge.timesPerDay
+                item.distance = moveChallenge.distance
+                item.unit = moveChallenge.unit
+                item.MondayTime = moveChallenge.MondayTime
+                item.MondayPlace = moveChallenge.MondayPlace
+                item.TuesdayTime = moveChallenge.TuesdayTime
+                item.TuesdayPlace = moveChallenge.TuesdayPlace
+                item.WednesdayTime = moveChallenge.WednesdayTime
+                item.WednesdayPlace = moveChallenge.WednesdayPlace
+                item.ThursdayTime = moveChallenge.ThursdayTime
+                item.TuesdayPlace = moveChallenge.ThursdayPlace
+                item.FridayTime = moveChallenge.FridayTime
+                item.FridayPlace = moveChallenge.FridayPlace
+                item.SaturdayTime = moveChallenge.SaturdayTime
+                item.SaturdayPlace = moveChallenge.SaturdayPlace
+                item.SundayTime = moveChallenge.SundayTime
+                item.SundayPlace = moveChallenge.SundayPlace
+                console.log("Nachher: ", item)
+              }
+              
+            })
+          })  
+        let results = jsonToCSV(jsonData);
+        console.log("Results: ", results)
+        fs.writeFile("output.csv", results)
+    }
+});
+  
+  
+  return {props: {}}
+}
 
 
 export default function Home() {
+
+  
+  const exportCSV = () => {
+    location.reload()
+  }
+
+  const exportCSVLink = () => {
+    location.reload()
+    location = "/personalDetails"
+    
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +92,13 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Hi</h1>
+        <h1>Home</h1>
+        <div className={styles.buttonContainer}>
+          <Link href="/personalDetails">
+            <Button variant="outlined" onClick={exportCSVLink}> Neuen Nutzer anlegen </Button>
+          </Link>
+          <Button variant="outlined" onClick={exportCSV}> Daten in CSV umwandeln </Button>
+        </div>
       </main>
 
       <footer className={styles.footer}>

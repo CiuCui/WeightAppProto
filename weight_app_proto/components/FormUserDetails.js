@@ -53,7 +53,7 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
                     </div>
 
                     <div className={personalStyles.stepBtn}>
-                        <Button className={personalStyles.soloBtn} onClick={nextStep} variant="outlined">Next</Button>
+                        <Button className={personalStyles.soloBtn} onClick={nextStep} variant="outlined">Weiter</Button>
                     </div>
                     <Alert className={personalStyles.alert} severity="info">This is an info alert — check it out!</Alert>
                 </div>

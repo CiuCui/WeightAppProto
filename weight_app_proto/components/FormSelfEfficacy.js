@@ -25,8 +25,8 @@ const FormSelfEfficacy = ({ values, handleChange, nextStep, prevStep }) => {
                 </div>
 
                 <div className={goalStyles.stepBtn}>
-                    <Button onClick={prevStep} variant="outlined">Previous</Button>
-                    <Button onClick={nextStep} variant="outlined">Next</Button>
+                    <Button onClick={prevStep} variant="outlined">Zurück</Button>
+                    <Button onClick={nextStep} variant="outlined">Weiter</Button>
                 </div>
             </div>
         </div>

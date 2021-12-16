@@ -3,6 +3,8 @@ import goalStyles from '../styles/Goal.module.css'
 import FormHeader from './FormHeader';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import Link from 'next/link'
+
 
 const FormGoalConfirm = ({ values, prevStep, confirm }) => {
 
@@ -41,9 +43,10 @@ const FormGoalConfirm = ({ values, prevStep, confirm }) => {
 
 
                 <div className={goalStyles.stepBtn}>
-                    <Button onClick={prevStep} variant="outlined">Previous</Button>
-                    <Button onClick={confirm} variant="outlined">Confirm</Button>
-                    <Button onClick={test} variant="contained">Test</Button>
+                    <Button onClick={prevStep} variant="outlined">Zurück</Button>
+                    <Link href="/moveChallenge">
+                        <Button onClick={confirm} variant="outlined">Speichern</Button>
+                    </Link>
                 </div>
 
             </div>

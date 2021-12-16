@@ -4,6 +4,7 @@ import FormHeader from './FormHeader';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
+import Link from 'next/link'
 
 
 const FormConfirm = ({ values, prevStep, confirm }) => {
@@ -63,9 +64,10 @@ const FormConfirm = ({ values, prevStep, confirm }) => {
 
 
                 <div className={personalStyles.stepBtn}>
-                    <Button onClick={prevStep} variant="outlined">Previous</Button>
-                    <Button onClick={confirm} variant="outlined">Confirm</Button>
-                    <Button onClick={test} variant="contained">Test</Button>
+                    <Button onClick={prevStep} variant="outlined">Zurück</Button>
+                    <Link href="/goals" >
+                        <Button onClick={confirm} variant="outlined">Speichern</Button>
+                    </Link>
                 </div>
 
             </div>

@@ -10,6 +10,12 @@
       flex-direction: row;
   }
 
+
+.sectionTimes {
+    display: flex;
+    margin-top: 2rem;
+    
+  }
 .stepBtn {
     display: flex;
     justify-content: space-between;
@@ -37,8 +43,12 @@
 }
 
 
+.overviewHead label{
+  font-weight: 600;
+}
 
-.overviewItem {
+
+.overviewItemTimes {
   vertical-align: baseline;
 }
 
@@ -62,7 +72,7 @@
     flex-direction: column;
     justify-content: flex-start;
     font-size: 1.25rem;
-    width: 50%
+    width: 60%
   }
 
   .fieldContainer {
