@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FormHeader from './FormHeader';
 import challengeStyles from '../styles/Challenge.module.css'
-import { Button, Checkbox, TextField, FormControl, FormControlLabel, FormGroup, FormLabel, Grid, InputLabel, MenuItem, RadioGroup, Radio, Select } from '@mui/material'
+import { Button, Checkbox, TextField, FormControl, FormControlLabel, FormGroup, FormLabel, Grid, InputLabel, MenuItem, RadioGroup, Radio, Select, Slider } from '@mui/material'
 import { v4 as uuidv4 } from 'uuid';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -21,6 +21,10 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
     const [sonntag, setSonntag] = useState(false)
     const [sortedDays, setSortedDays] = useState([])
 
+    function valuetext(value) {
+        return `${value/20}`;
+      }
+      
     useEffect(() => {
         const isDaySelected = (day) => {
             if (values.days) {
@@ -131,15 +135,23 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         </FormGroup>
                     </div>
 
-                    <div className={challengeStyles.section}>
+                    <div className={challengeStyles.slider}>
                         <label> Wie häufig am Tag möchtest du dich bewegen? </label>
                         <FormControl component="fieldset">
+                            <div className={challengeStyles.sliderd}>
                             <FormLabel component="legend"> Häufigkeit</FormLabel>
-                            <RadioGroup row aria-label="haeufigkeitRadioGroup" value={values.timesPerDay} name="haeufigkeit-radioGroup" onChange={e => handleChange("timesPerDay", e)}>
-                                {answerArray.map((answer) => {
-                                    return <FormControlLabel key={answer} control={<Radio value={answer} />} label={answer} />
-                                })}
-                            </RadioGroup>
+                            
+                                <Slider
+                                    aria-label="Häufigkeit"
+                                    onChange={e => handleChange("timesPerDay", e)}
+                                    defaultValue={0}
+                                    value={values.timesPerDay * 20}
+                                    getAriaValueText={valuetext}
+                                    step={20}
+                                    valueLabelDisplay="off"
+                                    marks={[{value:0, label:0},{value:20, label:1},{value:40, label:2},{value:60, label:3}, {value:80, label:4}, {value:100, label:5}]}
+                                    />
+                            </div>
                         </FormControl>
                     </div>
 

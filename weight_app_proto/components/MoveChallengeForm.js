@@ -78,10 +78,7 @@ const MoveChallengeForm = () => {
                 }
                 break;
             case "timesPerDay":
-                if(e.target.value >= 4){
-                    alert("Mehr als 3 Sporteinheiten pro Tag ist schon ziemlich. Natürlich kannst du es gerne versuchen, aber überlege dir, ob du das wirklich umsetzen kannst.")
-                }
-                setTimesPerDay(e.target.value)
+                setTimesPerDay(e.target.value / 20)
                 break;
             case "distance":
                 setDistance(e.target.value)
@@ -138,8 +135,6 @@ const MoveChallengeForm = () => {
         console.log(values)
         addChallenge(values)
     }
-
-
 
     switch (step) {
         case 1:

@@ -10,7 +10,7 @@ const about = () => {
 
 
     const findIchGut = () => {
-        console.log("Danke", user)
+        console.log("Danke")
     }
     return (
         <>

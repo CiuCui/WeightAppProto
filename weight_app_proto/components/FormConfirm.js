@@ -23,16 +23,22 @@ const FormConfirm = ({ values, prevStep, confirm }) => {
                 <div className={personalStyles.overview}>
                     <Grid container spacing={2}>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
-                            <label>First Name:</label>
+                            <label>Vorame:</label>
                         </Grid>
                         <Grid item xs={6} className={personalStyles.overviewItem}>
                             <label>{values.firstName}</label>
                         </Grid>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
-                            <label>Last Name:</label>
+                            <label>Nachname:</label>
                         </Grid>
                         <Grid item xs={6} className={personalStyles.overviewItem}>
                             <label>{values.lastName}</label>
+                        </Grid>
+                        <Grid item xs={5} className={personalStyles.overviewItem}>
+                            <label>Geschlecht:</label>
+                        </Grid>
+                        <Grid item xs={6} className={personalStyles.overviewItem}>
+                            <label>{values.gender}</label>
                         </Grid>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
                             <label>Mail:</label>
@@ -41,19 +47,19 @@ const FormConfirm = ({ values, prevStep, confirm }) => {
                             <label>{values.mail}</label>
                         </Grid>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
-                            <label>Age</label>
+                            <label>Alter</label>
                         </Grid>
                         <Grid item xs={6} className={personalStyles.overviewItem}>
                             <label>{values.age}</label>
                         </Grid>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
-                            <label>Weight</label>
+                            <label>Gewicht</label>
                         </Grid>
                         <Grid item xs={6} className={personalStyles.overviewItem}>
                             <label>{values.weight}</label>
                         </Grid>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
-                            <label>Height</label>
+                            <label>Größe</label>
                         </Grid>
                         <Grid item xs={6} className={personalStyles.overviewItem}>
                             <label>{values.height}</label>

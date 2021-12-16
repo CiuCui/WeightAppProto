@@ -29,6 +29,12 @@
       "selfEfficacy": "5",
       "motivation": "9",
       "id": "0e678d25-5f18-4a9d-a15a-10053e2e08b0"
+    },
+    {
+      "goal": "UUUUUUUUUUUUUUUUUUUuuuuuu",
+      "selfEfficacy": "4",
+      "motivation": "8",
+      "id": "62388727-be97-4f6f-b18c-874b5b7bf611"
     }
   ],
   "moveChallenge": [
@@ -119,6 +125,28 @@
       "SaturdayPlace": "",
       "SundayTime": "",
       "SundayPlace": ""
+    },
+    {
+      "moveType": "UUUUUUUuuuuUU",
+      "days": 2,
+      "timesPerDay": 2,
+      "distance": "UUUuu",
+      "unit": "m",
+      "id": "62388727-be97-4f6f-b18c-874b5b7bf611",
+      "MondayTime": "2021-12-16T18:25:00.289Z",
+      "MondayPlace": "UUuu",
+      "TuesdayTime": "",
+      "TuesdayPlace": "",
+      "WednesdayTime": "2021-12-16T17:20:00.787Z",
+      "WednesdayPlace": "UuUuU",
+      "ThursdayTime": "",
+      "ThursdayPlace": "",
+      "FridayTime": "",
+      "FridayPlace": "",
+      "SaturdayTime": "",
+      "SaturdayPlace": "",
+      "SundayTime": "",
+      "SundayPlace": ""
     }
   ],
   "userDetails": [
@@ -129,7 +157,8 @@
       "age": "20",
       "weight": "80",
       "height": "188",
-      "id": "30c07b81-3d3a-48b5-969e-c60e3dc3f21e"
+      "id": "30c07b81-3d3a-48b5-969e-c60e3dc3f21e",
+      "gender": "Männlich"
     },
     {
       "firstName": "Q",
@@ -138,7 +167,8 @@
       "age": "QQ",
       "weight": "QQ",
       "height": "QQ",
-      "id": "cc3d0de2-22f1-4d58-b16f-36c377914706"
+      "id": "cc3d0de2-22f1-4d58-b16f-36c377914706",
+      "gender": "Männlich"
     },
     {
       "firstName": "HHHH",
@@ -147,7 +177,8 @@
       "age": "HHH",
       "weight": "HHH",
       "height": "HHH",
-      "id": "aa5316ae-c2ae-4e73-8c9f-ec886361848e"
+      "id": "aa5316ae-c2ae-4e73-8c9f-ec886361848e",
+      "gender": "Männlich"
     },
     {
       "firstName": "ZZZZZ",
@@ -156,7 +187,18 @@
       "age": "ZZZZ",
       "weight": "ZZZZ",
       "height": "ZZZZ",
-      "id": "0e678d25-5f18-4a9d-a15a-10053e2e08b0"
+      "id": "0e678d25-5f18-4a9d-a15a-10053e2e08b0",
+      "gender": "Männlich"
+    },
+    {
+      "firstName": "UUUU",
+      "lastName": "UUU",
+      "mail": "UU@UU",
+      "age": "15",
+      "weight": "80",
+      "height": "165",
+      "id": "62388727-be97-4f6f-b18c-874b5b7bf611",
+      "gender": "Männlich"
     }
   ]
 }

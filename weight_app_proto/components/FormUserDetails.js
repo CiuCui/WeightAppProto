@@ -2,10 +2,9 @@ import React from 'react';
 import personalStyles from '../styles/Personal.module.css'
 
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
-import Alert from '@mui/material/Alert';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+
 import FormHeader from './FormHeader';
+import { FormControl, Select, MenuItem, InputLabel, Button, TextField, Alert } from '@mui/material';
 
 const FormUserDetails = ({ nextStep, values, handleChange }) => {
 
@@ -27,7 +26,7 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
                         <label> Wie lautet dein Vorname? </label>
                         <TextField
                             className={personalStyles.field}
-                            label="Enter your First Name"
+                            label="Gib bitte deinen Vornamen ein"
                             onChange={e => handleChange("firstName", e)}
                             defaultValue={values.firstName}
                         />
@@ -37,16 +36,35 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
                         <label> Und dein Nachname? </label>
                         <TextField
                             className={personalStyles.field}
-                            label="Enter your Last Name"
+                            label="Gib bitte deinen Nachnamen ein"
                             onChange={e => handleChange("lastName", e)}
                             defaultValue={values.lastName}
                         />
+                    </div>
+
+                    <div className={personalStyles.section}>
+                        <label> Welches Geschlecht hast du? </label>
+                        <FormControl className={personalStyles.field} >
+                                <InputLabel id="gender-label">Geschlecht</InputLabel>
+                                <Select
+                                    labelId="gender-label"
+                                    id="gender-select"
+                                    value={values.gender}
+                                    label="Gender"
+                                    onChange={e => handleChange("gender", e)}
+                                    defaultValue={"Divers"}
+                                >
+                                    <MenuItem value={"Weiblich"}>Weiblich</MenuItem>
+                                    <MenuItem value={"Männlich"}>Männlich</MenuItem>
+                                    <MenuItem value={"Divers"}>Divers</MenuItem>
+                                </Select>
+                            </FormControl>
                     </div>
                     <div className={personalStyles.section}>
                         <label> Unter welcher Mailadresse können wir dich erreichen? </label>
                         <TextField
                             className={personalStyles.field}
-                            label="Enter your mail"
+                            label="Gib bitte deine Mailadresse ein"
                             onChange={e => handleChange("mail", e)}
                             defaultValue={values.mail}
                         />
@@ -55,7 +73,6 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
                     <div className={personalStyles.stepBtn}>
                         <Button className={personalStyles.soloBtn} onClick={nextStep} variant="outlined">Weiter</Button>
                     </div>
-                    <Alert className={personalStyles.alert} severity="info">This is an info alert — check it out!</Alert>
                 </div>
             </div >
         </>

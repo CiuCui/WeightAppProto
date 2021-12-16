@@ -13,9 +13,9 @@ const FormSelfEfficacy = ({ values, handleChange, nextStep, prevStep }) => {
 
 
                 <div className={goalStyles.section}>
-                    <label> Wie sicher bist du, dieses Ziel zu erreichen? </label>
+                    <label> Wie sicher bist du, dieses Ziel zu erreichen?</label>
                     <FormControl component="fieldset">
-                        <FormLabel component="legend">Erfolgswahrscheinlichkeit</FormLabel>
+                        <FormLabel component="legend">Erfolgserwartung</FormLabel>
                         <RadioGroup row aria-label="selfEfficacyRadioGroup" value={values.selfEfficacy} name="selfEfficacy-radioGroup" onChange={e => handleChange("selfEfficacy", e)}>
                             {answerArray.map((answer) => {
                                 return <FormControlLabel key={answer} value={answer} control={<Radio />} label={answer} />

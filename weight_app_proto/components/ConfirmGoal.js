@@ -32,7 +32,7 @@ const FormGoalConfirm = ({ values, prevStep, confirm }) => {
                             <label>{values.selfEfficacy}</label>
                         </Grid>
                         <Grid item xs={5} className={goalStyles.overviewItem}>
-                            <label>Motivtion:</label>
+                            <label>Motivation:</label>
                         </Grid>
                         <Grid item xs={6} className={goalStyles.overviewItem}>
                             <label>{values.motivation}</label>

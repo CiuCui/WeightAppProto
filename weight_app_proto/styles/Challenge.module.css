@@ -10,6 +10,11 @@
       flex-direction: row;
   }
 
+  .slider {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
 
 .sectionTimes {
     display: flex;
