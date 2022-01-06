@@ -9,11 +9,11 @@ const MoveChallengeForm = () => {
     const id = React.useContext(UserContext);
 
     const [step, setStep] = useState(1)
-    const [moveType, setMoveType] = useState("")
+    const [moveType, setMoveType] = useState("Laufen")
     const [days, setDays] = useState([])
     const [timesPerDay, setTimesPerDay] = useState("")
     const [distance, setDistance] = useState("")
-    const [unit, setUnit] = useState("")
+    const [unit, setUnit] = useState("km")
     const [times, setTimes] = useState({
         "Montag": { time: "", place: "" },
         "Dienstag": { time: "", place: "" },
@@ -132,7 +132,6 @@ const MoveChallengeForm = () => {
     }
 
     const confirm = () => {
-        console.log(values)
         addChallenge(values)
     }
 

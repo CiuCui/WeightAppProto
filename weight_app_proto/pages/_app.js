@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
   let generatedId = uuidv4();
   const [user, setUser] = useState(generatedId)
  
-
   return (
     <UserContext.Provider value={user}>
       <Layout>
@@ -20,5 +19,6 @@ function MyApp({ Component, pageProps }) {
     </UserContext.Provider>
   )
 }
+ 
 
 export default MyApp

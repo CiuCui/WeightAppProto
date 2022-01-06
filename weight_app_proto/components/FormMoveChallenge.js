@@ -105,6 +105,153 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
         return sortedDays
     }
 
+
+    const nextStepHelp = () => {
+        checkInput()
+        nextStep()
+    }
+    const checkInput = () => {
+        console.log("check")
+
+        if(values.moveType){
+           
+
+            switch (values.moveType) {
+                case "Laufen": 
+                    if(values.distance && isNaN(values.distance)){
+                        alert("Bitte Zahl eingeben.")
+                        break;
+                    }
+                    let dist = parseInt(values.distance)
+                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    break;
+                case "Spazieren gehen": 
+                    if(values.distance && isNaN(values.distance)){
+                        alert("Bitte Zahl eingeben.")
+                        break;
+                    }
+                    let dist = parseInt(values.distance)
+                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    break;
+                case "Schwimmen": 
+                    if(values.distance && isNaN(values.distance)){
+                        alert("Bitte Zahl eingeben.")
+                        break;
+                    }
+                    let dist = parseInt(values.distance)
+                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    break;
+                case "Radfahren": 
+                    if(values.distance && isNaN(values.distance)){
+                        alert("Bitte Zahl eingeben.")
+                        break;
+                    }
+                    let dist = parseInt(values.distance)
+                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                        alert("Bist du sicher, dass du diese Strecke realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    break;
+                case "Workout": 
+                    if(values.distance && isNaN(values.distance)){
+                        alert("Bitte Zahl eingeben.")
+                        break;
+                    }
+                    let dist = parseInt(values.distance)
+                    if(values.unit=="km" || values.unit == "m"){
+                        alert("Eine Streckenangabe ist nicht passend.")
+                        break;
+                    }
+                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    break;
+                case "Yoga": 
+                    if(values.distance && isNaN(values.distance)){
+                        alert("Bitte Zahl eingeben.")
+                        break;
+                    }
+                    let dist = parseInt(values.distance)
+                    if(values.unit=="km" || values.unit == "m"){
+                        alert("Eine Streckenangabe ist nicht passend.")
+                        break;
+                    }
+                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                        alert("Bist du sicher, dass du diese Dauer realistisch ist?")
+                        break;
+                    }
+                    break;
+            }
+        }
+        
+    }
+
     return (
         <>
             <div className={challengeStyles.container}>
@@ -114,12 +261,27 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
 
                     <div className={challengeStyles.section}>
                         <label> Wie möchtest du dich bewegen? </label>
-                        <TextField
-                            className={challengeStyles.field}
-                            label="Bewegungsart"
-                            onChange={e => handleChange("moveType", e)}
-                            defaultValue={values.moveType}
-                        />
+                        <FormControl className={challengeStyles.fieldFull} >
+                                <InputLabel id="moveType-movement-label">Bewegungsform</InputLabel>
+                                <Select
+                                    labelId="moveType-movement-label"
+                                    id="moveType-select"
+                                    value={values.type}
+                                    label="MoveType"
+                                    onChange={e => handleChange("moveType", e)}
+                                    defaultValue={values.moveType ? values.moveType : "Laufen"}
+                                >
+                                    <MenuItem value={"Laufen"}>Laufen</MenuItem>
+                                    <MenuItem value={"Spazieren gehen"}>Spazieren gehen</MenuItem>
+                                    <MenuItem value={"Radfahren"}>Radfahren</MenuItem>
+                                    <MenuItem value={"Schwimmen"}>Schwimmen</MenuItem>
+                                    <MenuItem value={"Workout"}>Workout</MenuItem>
+                                    <MenuItem value={"Yoga"}>Yoga</MenuItem>
+                                    <MenuItem value={"Anderes"}>Anderes</MenuItem>
+
+
+                                </Select>
+                            </FormControl>
                     </div>
 
                     <div className={challengeStyles.section}>
@@ -226,7 +388,7 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                     </div>
 
                     <div className={challengeStyles.stepBtn}>
-                        <Button onClick={nextStep} variant="outlined">Weiter</Button>
+                        <Button onClick={nextStepHelp} variant="outlined">Weiter</Button>
                     </div>
                 </div>
             </div>

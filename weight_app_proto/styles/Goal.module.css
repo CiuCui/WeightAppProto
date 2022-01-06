@@ -9,6 +9,13 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.questBtn{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .overview {
@@ -55,7 +62,12 @@
 
   .field {
       margin-top: 1rem;
-      width: max(100%, 5rem)
+      width: max(100%, 5rem);
+      
+  }
+
+  .fieldJa {
+    margin-left: 1rem;
   }
   
   .footer {

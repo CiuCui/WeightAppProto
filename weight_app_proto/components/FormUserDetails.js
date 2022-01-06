@@ -20,7 +20,7 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
             <div className={personalStyles.container}>
 
                 <div className={personalStyles.main}>
-                    <FormHeader title="User Details" />
+                    <FormHeader title="Persönliche Informationen" />
 
                     <div className={personalStyles.section}>
                         <label> Wie lautet dein Vorname? </label>

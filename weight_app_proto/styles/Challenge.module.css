@@ -95,6 +95,10 @@
       margin-top: 1rem;
       width: max(50%, 5rem)
   }
+  .fieldFull {
+    margin-top: 1rem;
+    width: max(100%, 5rem)
+}
   
   .footer {
     display: flex;
