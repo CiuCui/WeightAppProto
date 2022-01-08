@@ -1,14 +1,22 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import personalStyles from '../styles/Personal.module.css'
 import FormHeader from './FormHeader';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
-import Link from 'next/link'
+import Link from 'next/link';
+import {gsap} from 'gsap'; 
 
 
 const FormConfirm = ({ values, prevStep, confirm }) => {
 
+    
+    useEffect(() =>{
+        var gTimeline = gsap.timeline()
+        .from("#gTitle", {y:30, duration: 0.8, opacity: 0})
+        .from(".overview", {y:30, duration: 0.5, opacity: 0}, "-=0.6")
+        .from("#gBtns", {y:30, duration: 0.5, opacity: 0}, "-=0.5")
+    }, [])
 
 
     const test = (e) => {
@@ -19,8 +27,11 @@ const FormConfirm = ({ values, prevStep, confirm }) => {
     return (
         <div className={personalStyles.container}>
             <div className={personalStyles.main}>
-                <FormHeader title="Overview" />
-                <div className={personalStyles.overview}>
+                <div id='gTitle'>
+                    <FormHeader title="Overview" />
+                </div>
+                
+                <div className={`${personalStyles.overview} overview`}>
                     <Grid container spacing={2}>
                         <Grid item xs={5} className={personalStyles.overviewItem}>
                             <label>Vorame:</label>
@@ -69,7 +80,7 @@ const FormConfirm = ({ values, prevStep, confirm }) => {
                 </div>
 
 
-                <div className={personalStyles.stepBtn}>
+                <div id='gBtns' className={personalStyles.stepBtn} >
                     <Button onClick={prevStep} variant="outlined">Zurück</Button>
                     <Link href="/goals" >
                         <Button onClick={confirm} variant="outlined">Speichern</Button>

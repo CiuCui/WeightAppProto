@@ -66,8 +66,10 @@
 }
 
 .soloBtn {
-  margin-left: auto;
-  margin-right: 0;
+  display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-direction: row-reverse;
 }
   
   .main {

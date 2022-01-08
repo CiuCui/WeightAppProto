@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import TimePicker from '@mui/lab/TimePicker';
+import {gsap} from 'gsap';
 
 
 
@@ -26,6 +27,8 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
       }
       
     useEffect(() => {
+        gsap.from("#all", {y:30, duration: 0.8})
+
         const isDaySelected = (day) => {
             if (values.days) {
                 return values.days.includes(day)
@@ -111,8 +114,7 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
         nextStep()
     }
     const checkInput = () => {
-        console.log("check")
-
+        let distance = 0;
         if(values.moveType){
            
 
@@ -122,20 +124,20 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         alert("Bitte Zahl eingeben.")
                         break;
                     }
-                    let dist = parseInt(values.distance)
-                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                    distance = parseInt(values.distance)
+                    if(values.unit=="km" && (distance < 1 || distance >= 20)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                    if(values.unit== "m" && (distance < 1000 || distance >= 20000)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                    if(values.unit== "h" && (distance < 0 || distance >= 2)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
-                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                    if(values.unit== "min" && (distance < 10 || distance >= 90)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
@@ -145,20 +147,20 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         alert("Bitte Zahl eingeben.")
                         break;
                     }
-                    let dist = parseInt(values.distance)
-                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                    distance = parseInt(values.distance)
+                    if(values.unit=="km" && (distance < 1 || distance >= 20)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                    if(values.unit== "m" && (distance < 1000 || distance >= 20000)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                    if(values.unit== "h" && (distance < 0 || distance >= 2)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
-                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                    if(values.unit== "min" && (distance < 10 || distance >= 90)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
@@ -168,20 +170,20 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         alert("Bitte Zahl eingeben.")
                         break;
                     }
-                    let dist = parseInt(values.distance)
-                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                    distance = parseInt(values.distance)
+                    if(values.unit=="km" && (distance < 1 || distance >= 20)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                    if(values.unit== "m" && (distance < 1000 || distance >= 20000)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                    if(values.unit== "h" && (distance < 0 || distance >= 2)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
-                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                    if(values.unit== "min" && (distance < 10 || distance >= 90)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
@@ -191,20 +193,20 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         alert("Bitte Zahl eingeben.")
                         break;
                     }
-                    let dist = parseInt(values.distance)
-                    if(values.unit=="km" && (dist < 1 || dist >= 20)){
+                    distance = parseInt(values.distance)
+                    if(values.unit=="km" && (distance < 1 || distance >= 20)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "m" && (dist < 1000 || dist >= 20000)){
+                    if(values.unit== "m" && (distance < 1000 || distance >= 20000)){
                         alert("Bist du sicher, dass du diese Strecke realistisch ist?")
                         break;
                     }
-                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                    if(values.unit== "h" && (distance < 0 || distance >= 2)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
-                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                    if(values.unit== "min" && (distance < 10 || distance >= 90)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
@@ -214,16 +216,16 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         alert("Bitte Zahl eingeben.")
                         break;
                     }
-                    let dist = parseInt(values.distance)
+                    distance = parseInt(values.distance)
                     if(values.unit=="km" || values.unit == "m"){
                         alert("Eine Streckenangabe ist nicht passend.")
                         break;
                     }
-                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                    if(values.unit== "h" && (distance < 0 || distance >= 2)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
-                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                    if(values.unit== "min" && (distance < 10 || distance >= 90)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
@@ -233,16 +235,16 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
                         alert("Bitte Zahl eingeben.")
                         break;
                     }
-                    let dist = parseInt(values.distance)
+                    distance = parseInt(values.distance)
                     if(values.unit=="km" || values.unit == "m"){
                         alert("Eine Streckenangabe ist nicht passend.")
                         break;
                     }
-                    if(values.unit== "h" && (dist < 0 || dist >= 2)){
+                    if(values.unit== "h" && (distance < 0 || distance >= 2)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
-                    if(values.unit== "min" && (dist < 10 || dist >= 90)){
+                    if(values.unit== "min" && (distance < 10 || distance >= 90)){
                         alert("Bist du sicher, dass du diese Dauer realistisch ist?")
                         break;
                     }
@@ -256,7 +258,7 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
         <>
             <div className={challengeStyles.container}>
 
-                <div className={challengeStyles.main}>
+                <div id="all" className={challengeStyles.main}>
                     <FormHeader title="Bewegungs-Challenge erstellen" />
 
                     <div className={challengeStyles.section}>
@@ -387,7 +389,7 @@ const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTim
 
                     </div>
 
-                    <div className={challengeStyles.stepBtn}>
+                    <div className={challengeStyles.soloBtn}>
                         <Button onClick={nextStepHelp} variant="outlined">Weiter</Button>
                     </div>
                 </div>

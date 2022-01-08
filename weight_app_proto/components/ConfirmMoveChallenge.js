@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import challengeStyles from '../styles/Challenge.module.css'
 import FormHeader from './FormHeader'
 import { Button, Grid } from '@mui/material'
-import Link from 'next/link'
+import Link from 'next/link';
+import {gsap} from 'gsap';
 
 
 const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
@@ -11,6 +12,11 @@ const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
 
 
     useEffect(() => {
+        var gTimeline = gsap.timeline()
+        .from("#gTitle", {x:30, duration: 0.3, opacity: 0})
+        .from(".overview", {y:50, duration: 0.3, opacity: 0}, "-=0.25")
+        .from("#gBtns", {y:50, duration: 0.3, opacity: 0}, "-=0.2")
+
         let times = []
         if (values.times["Montag"]["time"]) {
             times.push(values.times["Montag"])
@@ -34,8 +40,11 @@ const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
         <>
             <div className={challengeStyles.container}>
                 <div className={challengeStyles.main}>
-                    <FormHeader title="Overview" />
-                    <div className={challengeStyles.overviewConfirm}>
+                    <div id="gTitle">
+                        <FormHeader title="Overview" />
+                    </div>
+
+                    <div className={`${challengeStyles.overviewConfirm} overview`}>
                         <Grid container spacing={2}>
                             <Grid item xs={5} className={challengeStyles.overviewItem}>
                                 <label>Bewegungsart:</label>
@@ -57,10 +66,10 @@ const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
                             </Grid>
                         </Grid>
                     </div>
-                    <div className={challengeStyles.section}>
+                    <div className={`${challengeStyles.section} overview`}>
                         <label> <h3> Aktivitätenplanung:</h3> </label>
                     </div>
-                    <div className={challengeStyles.sectionTimes}>
+                    <div className={`${challengeStyles.sectionTimes} overview`}>
                         <Grid container spacing={2}>
                             <Grid item xs={4} className={challengeStyles.overviewHead}>
                                     <label> Tag </label>
@@ -187,7 +196,7 @@ const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
                         </Grid>
                     </div>
 
-                    <div className={challengeStyles.section}>
+                    <div id="gBtns" className={challengeStyles.section}>
                         <div className={challengeStyles.stepBtn}>
                             <Button onClick={prevStep} variant="outlined">Zurück</Button>
                             <Link href="/">
