@@ -9,7 +9,7 @@ const FormSelfEfficacy = ({ values, handleChange, nextStep, prevStep }) => {
     return (
         <div className={goalStyles.container}>
             <div className={goalStyles.main}>
-                <FormHeader title="Self-Efficacy" />
+                <FormHeader title="Selbstwirksamkeit" />
 
 
                 <div className={goalStyles.section}>

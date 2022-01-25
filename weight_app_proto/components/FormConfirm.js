@@ -28,7 +28,7 @@ const FormConfirm = ({ values, prevStep, confirm }) => {
         <div className={personalStyles.container}>
             <div className={personalStyles.main}>
                 <div id='gTitle'>
-                    <FormHeader title="Overview" />
+                    <FormHeader title="Überblick" />
                 </div>
                 
                 <div className={`${personalStyles.overview} overview`}>

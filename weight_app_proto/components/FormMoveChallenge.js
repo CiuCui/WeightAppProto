@@ -9,7 +9,6 @@ import TimePicker from '@mui/lab/TimePicker';
 import {gsap} from 'gsap';
 
 
-
 const FormMovementChallenge = ({ values, nextStep, handleChange, handleChangeTimes }) => {
 
     const answerArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

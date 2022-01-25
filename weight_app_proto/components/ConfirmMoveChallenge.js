@@ -41,7 +41,7 @@ const ConfirmMovementChallenge = ({ values, prevStep , confirm}) => {
             <div className={challengeStyles.container}>
                 <div className={challengeStyles.main}>
                     <div id="gTitle">
-                        <FormHeader title="Overview" />
+                        <FormHeader title="Überblick" />
                     </div>
 
                     <div className={`${challengeStyles.overviewConfirm} overview`}>

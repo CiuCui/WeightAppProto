@@ -27,7 +27,7 @@ const FormGoalConfirm = ({ values, prevStep, confirm }) => {
         <div className={goalStyles.container}>
             <div className={goalStyles.main}>
                 <div id="gTitle">
-                    <FormHeader title="Overview" />
+                    <FormHeader title="Überblick" />
                 </div>
                 
                 <div id="overview" className={goalStyles.overview}>
