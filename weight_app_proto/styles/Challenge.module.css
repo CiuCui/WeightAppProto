@@ -1,32 +1,106 @@
 .container {
     padding: 0 2rem;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .checkboxes {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+.sectionTimes {
+    display: flex;
+    margin-top: 2rem;
+    
+  }
+.stepBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.overview {
+  display: grid;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overviewConfirm {
+  display: grid;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overviewConfirm :nth-child(2n) {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+
+.overviewHead label{
+  font-weight: 600;
+}
+
+
+.overviewItemTimes {
+  vertical-align: baseline;
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.soloBtn {
+  display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-direction: row-reverse;
+}
   
   .main {
     min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     font-size: 1.25rem;
+    width: 60%
   }
 
-  .section {
-    margin-top: 2rem;
-  }
-  
-  .buttonContainer {
+  .fieldContainer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+
   }
 
-  .buttonContainer Button {
-    margin: 2rem;
-    height: 5rem;
+  .field {
+      margin-top: 1rem;
+      width: max(100%, 5rem)
   }
+
+  .fieldHalf {
+      margin-top: 1rem;
+      width: max(50%, 5rem)
+  }
+  .fieldFull {
+    margin-top: 1rem;
+    width: max(100%, 5rem)
+}
   
   .footer {
     display: flex;
@@ -119,10 +193,6 @@
     line-height: 1.5;
   }
   
-  .logo {
-    height: 1em;
-    margin-left: 0.5rem;
-  }
   
   @media (max-width: 600px) {
     .grid {

@@ -1,22 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Vor der ersten Nutzung
+
+Damit die App laufen kann, müssen npm-Befehle ausgeführt werden. Dafür muss [Node.js](https://nodejs.org/en/download/) heruntergeladen und installiert werden.
+
+Durch Doppelklick auf 
+```bash
+Install.bat
+```
+werden alle notwendigen Pakete installiert (eigentlich nur notwendig, wenn es keinen __node_modules__-Ordner gibt)
+
+Das wars schon.
 
 ## Getting Started
 
-First, run the development server:
+Doppelklick auf
 
 ```bash
-npm run dev
-# or
-yarn dev
+Start.bat
+```
+startet die App.
+
+Öffne [http://localhost:3000](http://localhost:3000) im Browser, um die App zu benutzen.
+
+
+## Daten
+
+Nach der Dateneingabe wird man auf dem __Home__-Seite verwiesen. Dort kann man auf __in CSV umwandeln__ klicken. Hierdurch wird die __output.csv__ im Hauptordner aktualisiert. 
+Die Daten hierfür werden immer aus der __db.json__-Datei gezogen. Wenn man die Daten resetten möchte, kann man die Datei __db_Vorlage.json__ duplizieren und die Kopie in _db.json_ umbenennen.
+
+Sollte die Vorlage mal verloren gehen: Die Datei braucht ein minimales Grundgerüst, um zu funkionieren. Wenn die Datei nur Zeilen enthält, funktioniert es:
+
+```json
+{
+    "Goals": [],
+    "moveChallenge": [],
+    "userDetails": []
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Code 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Der Code ist in meinem privaten Git-Repository. Gerne kann ich den veröffentlichen, wenn andere Personen die App weiterentwickeln möchten.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
 

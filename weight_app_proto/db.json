@@ -1,0 +1,204 @@
+{
+  "Goals": [
+    {
+      "goal": "Hier ist ein Ziel",
+      "selfEfficacy": "5",
+      "motivation": "7",
+      "id": "30c07b81-3d3a-48b5-969e-c60e3dc3f21e"
+    },
+    {
+      "goal": "QQQQ",
+      "selfEfficacy": "4",
+      "motivation": "5",
+      "id": "cc3d0de2-22f1-4d58-b16f-36c377914706"
+    },
+    {
+      "goal": "HHHHHH",
+      "selfEfficacy": "3",
+      "motivation": "9",
+      "id": "aa5316ae-c2ae-4e73-8c9f-ec886361848e"
+    },
+    {
+      "goal": "",
+      "selfEfficacy": " ",
+      "motivation": " ",
+      "id": "2750368c-7c92-4599-aefa-a52329fa61ed"
+    },
+    {
+      "goal": "ZZZZZZ",
+      "selfEfficacy": "5",
+      "motivation": "9",
+      "id": "0e678d25-5f18-4a9d-a15a-10053e2e08b0"
+    },
+    {
+      "goal": "UUUUUUUUUUUUUUUUUUUuuuuuu",
+      "selfEfficacy": "4",
+      "motivation": "8",
+      "id": "62388727-be97-4f6f-b18c-874b5b7bf611"
+    }
+  ],
+  "moveChallenge": [
+    {
+      "moveType": "Laufen",
+      "days": 2,
+      "timesPerDay": "2",
+      "distance": "4",
+      "unit": "min",
+      "id": "30c07b81-3d3a-48b5-969e-c60e3dc3f21e",
+      "MondayTime": "",
+      "MondayPlace": "",
+      "TuesdayTime": "2021-12-15T06:20:00.377Z",
+      "TuesdayPlace": "Berlin",
+      "WednesdayTime": "",
+      "WednesdayPlace": "",
+      "ThursdayTime": "",
+      "ThursdayPlace": "",
+      "FridayTime": "2021-12-15T18:50:00.758Z",
+      "FridayPlace": "Hamburg",
+      "SaturdayTime": "",
+      "SaturdayPlace": "",
+      "SundayTime": "",
+      "SundayPlace": ""
+    },
+    {
+      "moveType": "QQQQQQ",
+      "days": 3,
+      "timesPerDay": "4",
+      "distance": "QQQ",
+      "unit": "h",
+      "id": "cc3d0de2-22f1-4d58-b16f-36c377914706",
+      "MondayTime": "2021-12-16T19:36:00.730Z",
+      "MondayPlace": "Hamburg",
+      "TuesdayTime": "",
+      "TuesdayPlace": "",
+      "WednesdayTime": "2021-12-16T16:25:00.915Z",
+      "WednesdayPlace": "Sentrup",
+      "ThursdayTime": "",
+      "ThursdayPlace": "",
+      "FridayTime": "2021-12-16T21:11:00.624Z",
+      "FridayPlace": "Berlin",
+      "SaturdayTime": "",
+      "SaturdayPlace": "",
+      "SundayTime": "",
+      "SundayPlace": ""
+    },
+    {
+      "moveType": "HHH",
+      "days": 1,
+      "timesPerDay": "3",
+      "distance": "HHH",
+      "unit": "m",
+      "id": "aa5316ae-c2ae-4e73-8c9f-ec886361848e",
+      "MondayTime": "",
+      "MondayPlace": "",
+      "TuesdayTime": "2021-12-16T16:50:00.586Z",
+      "TuesdayPlace": "Münster",
+      "WednesdayTime": "",
+      "WednesdayPlace": "",
+      "ThursdayTime": "",
+      "ThursdayPlace": "",
+      "FridayTime": "",
+      "FridayPlace": "",
+      "SaturdayTime": "",
+      "SaturdayPlace": "",
+      "SundayTime": "",
+      "SundayPlace": ""
+    },
+    {
+      "moveType": "ZZZZZZ",
+      "days": 2,
+      "timesPerDay": "3",
+      "distance": "ZZZZ",
+      "unit": "h",
+      "id": "0e678d25-5f18-4a9d-a15a-10053e2e08b0",
+      "MondayTime": "",
+      "MondayPlace": "",
+      "TuesdayTime": "2021-12-16T16:45:00.090Z",
+      "TuesdayPlace": "Münster",
+      "WednesdayTime": "",
+      "WednesdayPlace": "",
+      "ThursdayTime": "2021-12-16T18:00:00.791Z",
+      "ThursdayPlace": "Sentrup",
+      "FridayTime": "",
+      "FridayPlace": "",
+      "SaturdayTime": "",
+      "SaturdayPlace": "",
+      "SundayTime": "",
+      "SundayPlace": ""
+    },
+    {
+      "moveType": "UUUUUUUuuuuUU",
+      "days": 2,
+      "timesPerDay": 2,
+      "distance": "UUUuu",
+      "unit": "m",
+      "id": "62388727-be97-4f6f-b18c-874b5b7bf611",
+      "MondayTime": "2021-12-16T18:25:00.289Z",
+      "MondayPlace": "UUuu",
+      "TuesdayTime": "",
+      "TuesdayPlace": "",
+      "WednesdayTime": "2021-12-16T17:20:00.787Z",
+      "WednesdayPlace": "UuUuU",
+      "ThursdayTime": "",
+      "ThursdayPlace": "",
+      "FridayTime": "",
+      "FridayPlace": "",
+      "SaturdayTime": "",
+      "SaturdayPlace": "",
+      "SundayTime": "",
+      "SundayPlace": ""
+    }
+  ],
+  "userDetails": [
+    {
+      "firstName": "Philipp",
+      "lastName": "Ciupke",
+      "mail": "p@pc.de",
+      "age": "20",
+      "weight": "80",
+      "height": "188",
+      "id": "30c07b81-3d3a-48b5-969e-c60e3dc3f21e",
+      "gender": "Männlich"
+    },
+    {
+      "firstName": "Q",
+      "lastName": "QQ",
+      "mail": "QQ@QQ",
+      "age": "QQ",
+      "weight": "QQ",
+      "height": "QQ",
+      "id": "cc3d0de2-22f1-4d58-b16f-36c377914706",
+      "gender": "Männlich"
+    },
+    {
+      "firstName": "HHHH",
+      "lastName": "HHHH",
+      "mail": "HH@HHH",
+      "age": "HHH",
+      "weight": "HHH",
+      "height": "HHH",
+      "id": "aa5316ae-c2ae-4e73-8c9f-ec886361848e",
+      "gender": "Männlich"
+    },
+    {
+      "firstName": "ZZZZZ",
+      "lastName": "ZZZZ",
+      "mail": "@ZZZ",
+      "age": "ZZZZ",
+      "weight": "ZZZZ",
+      "height": "ZZZZ",
+      "id": "0e678d25-5f18-4a9d-a15a-10053e2e08b0",
+      "gender": "Männlich"
+    },
+    {
+      "firstName": "UUUU",
+      "lastName": "UUU",
+      "mail": "UU@UU",
+      "age": "15",
+      "weight": "80",
+      "height": "165",
+      "id": "62388727-be97-4f6f-b18c-874b5b7bf611",
+      "gender": "Männlich"
+    }
+  ]
+}

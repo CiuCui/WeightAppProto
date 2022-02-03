@@ -1,20 +1,78 @@
 .container {
     padding: 0 2rem;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+.stepBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.overview {
+  display: grid;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.overview :nth-child(2n) {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+.overviewItem {
+  
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.soloBtn {
+  margin-left: auto;
+  margin-right: 0;
+}
   
   .main {
     min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     font-size: 1.25rem;
+    width: 60%
   }
 
-  .title a , .title span{
+  .field {
+      margin-top: 1rem;
+      width: max(100%, 5rem)
+  }
+  
+  .footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .title a {
     color: #0070f3;
     text-decoration: none;
   }
@@ -28,7 +86,7 @@
   .title {
     margin: 0;
     line-height: 1.15;
-    font-size: 2rem;
+    font-size: 4rem;
   }
   
   .title,
@@ -89,10 +147,6 @@
     line-height: 1.5;
   }
   
-  .logo {
-    height: 1em;
-    margin-left: 0.5rem;
-  }
   
   @media (max-width: 600px) {
     .grid {

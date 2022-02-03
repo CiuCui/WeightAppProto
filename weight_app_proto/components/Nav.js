@@ -10,8 +10,18 @@ const Nav = () => {
                     <Link href='/'>Home</Link>
                 </li>
                 <li>
+                    <Link href='/personalDetails'>Persönliche Daten</Link>
+                </li>
+                <li>
+                    <Link href='/goals' >Ziele setzen</Link>
+                </li>
+                <li>
+                    <Link href='/moveChallenge' >Bewegungs-Challenge erstellen</Link>
+                </li>
+                <li>
                     <Link href='/about'>About</Link>
                 </li>
+
             </ul>
         </nav>
     )
